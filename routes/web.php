@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PanierController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+ Route::get('produits/{slug}',[WelcomeController::class, 'showproduit'])->name('showproduit');
+//  panier
+  
+Route::post('ajouterpanier' , [\App\Http\Controllers\PanierController::class, 'ajoutpanier'])->name('ajoutpanier');
+
+Route::get('/',[\App\Http\Controllers\WelcomeController::class ,'index']);
