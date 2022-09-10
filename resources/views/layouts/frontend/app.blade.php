@@ -82,15 +82,15 @@
                   <div class="row d_flex">
                      <div class="col-md-4">
                         <ul class="conta_icon d_none1">
-                           <li><a href="#"><img src="images/email.png" alt="#"/> oumshouse@gmail.com</a> </li>
+                           <li><a href="#"><img src="{{asset('dcc/images/email.png')}}" alt="#"/> oumshouse@gmail.com</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
-                        <a class="logo" href="#"><img src="images/logo.png" alt="#"/></a>
+                        <a class="logo" href="#">OUMSHOUSE</a>
                      </div>
                      <div class="col-md-4">
                         <ul class="right_icon d_none1">
-                           <li><a href="#"><img src="images/shopping.png" alt="#"/></a> </li>
+                           <li><span class="navbar-tool-label">{{$nombredeproduit}}</span><a href="#"><img src="images/shopping.png" alt="#"/></a> </li>
                            <a href="#" class="order">Order Now</a> 
                         </ul>
                      </div>

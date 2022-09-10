@@ -42,14 +42,14 @@ class PanierController extends Controller
              'id' => $produit->id,
            'name' => $produit->nom,
            'price' => $produit->Prix,
-           'quantity' => $request->quantité,
+           'qty' => $request->quantité,
            
           
          ))->associate('App\Produit');
         
         // Cart::add($request->produit_id, $request->produit->nom,$request->produit->prix,$request->quantité )
         // // ->associate('App\Produit');
-        return redirect()->route('showproduit')->with('succes','produit ajouter au panier');
+        return redirect()->route('showproduit',['slug'=> $produit->slug])->with('success','produit ajouter au panier');
     }
 
     /**
